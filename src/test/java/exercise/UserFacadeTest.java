@@ -34,8 +34,8 @@ public class UserFacadeTest
     {
         //Given (in setup)
         //When
-        LoginStatus res = facade.verifyUser( "Lam", "abcde" );
-        // ORG: LoginStatus res = facade.verifyUser( "Jan", "abcde" );
+        // With fail LoginStatus res = facade.verifyUser( "Lam", "abcde" );
+        LoginStatus res = facade.verifyUser( "Jan", "abcde" );
         //Then
         assertThat( res, is( LoginStatus.OK ) );
     }

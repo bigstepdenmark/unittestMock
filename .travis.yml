@@ -7,4 +7,9 @@ cache:
     - $HOME/.m2
 
 script:
-- mvn verify
+  - mvn verify
+
+services:
+  - mysql
+before_install:
+  - mysql -e 'CREATE DATABASE usersDB;'
